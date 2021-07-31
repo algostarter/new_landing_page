@@ -1,36 +1,118 @@
-@include respond(laptop-s){
-    .hero{
-        &__text{
-            &-heading{
-                &-primary{
+@include respond(laptop-s) {
+    .navbar {
+        &__nav {
+            &-list {
+                transform: none;
+                width: unset;
+                height: unset;
+                background: none;
+                backdrop-filter: none;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                padding: 0;
+                list-style-type: none;
+                &--link {
+                    font-weight: 300;
+                }
+            }
+            &-menu {
+                display: none;
+            }
+            &-checkbox {
+                display: none;
+            }
+        }
+    }
+    .hero {
+        height: 100vh;
+        &__text {
+            &-heading {
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                &-primary {
                     font-size: 5vw;
                 }
-
-                &-secondary{
+                &-secondary {
                     font-size: 2vw;
                     font-weight: 300;
                 }
             }
-
-            &-social{
-                margin: 2rem 0;
-                & > a {
+            &-social {
+                margin: 1rem 0;
+                &>a {
                     font-size: 3vw;
                     margin: 1rem;
                 }
             }
-
-            &-poweredby{
-                display: flex;
-                flex-direction: row;
-                
-                & > h4{
-                    font-size: 2vw;
-                }    
-
-                & > img{
-                    height: 8vw;
+            &-poweredby {
+                margin-top: 0;
+                &>h4 {
+                    font-size: 1.6vw;
+                    opacity: 0.5;
                 }
+                &>a>img {
+                    height: auto;
+                    width: 25%;
+                }
+            }
+        }
+    }
+    .features {
+        flex-direction: row;
+        &__title {
+            width: 50%;
+            text-align: left;
+        }
+    }
+    .roadmap {
+        &__map {
+            &-text {
+                width: 50%;
+                &-card {
+                    margin: 1rem 0;
+                    &--list {
+                        &>li {
+                            font-size: 1.6rem;
+                        }
+                    }
+                    &:nth-child(2n) {
+                        transform: translateX(125%);
+                    }
+                }
+            }
+            &-line {
+                margin: 0;
+                &--dot {
+                    &:nth-child(2n) {
+                        &::after {
+                            margin-left: -7rem;
+                        }
+                    }
+                    &:first-child {
+                        transform: translateY(-5rem);
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(5rem);
+                    }
+                    &:last-child {
+                        transform: translateY(5rem);
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        height: 20vh;
+        flex-direction: row;
+        justify-content: space-between;
+        &>* {
+            width: 33%;
+            text-align: center;
+        }
+        &__social {
+            &>a {
+                font-size: 2vw;
             }
         }
     }

@@ -1,0 +1,34 @@
+body {
+    background-image: linear-gradient(rgba(beige, 0.1), rgba(white, 0.1)), url('../images/bg.png');
+    background-attachment: fixed;
+    animation: movebg 120s linear infinite;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 0.3rem;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
