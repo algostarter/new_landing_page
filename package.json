@@ -1,0 +1,23 @@
+{
+  "name": "starter_landing_page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node-sass \"assets/sass/main.scss\" \"assets/css/main.css\" -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algostarter/new_landing_page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/algostarter/new_landing_page/issues"
+  },
+  "homepage": "https://github.com/algostarter/new_landing_page#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

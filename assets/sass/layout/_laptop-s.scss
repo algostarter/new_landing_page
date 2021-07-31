@@ -1,0 +1,37 @@
+@include respond(laptop-s){
+    .hero{
+        &__text{
+            &-heading{
+                &-primary{
+                    font-size: 5vw;
+                }
+
+                &-secondary{
+                    font-size: 2vw;
+                    font-weight: 300;
+                }
+            }
+
+            &-social{
+                margin: 2rem 0;
+                & > a {
+                    font-size: 3vw;
+                    margin: 1rem;
+                }
+            }
+
+            &-poweredby{
+                display: flex;
+                flex-direction: row;
+                
+                & > h4{
+                    font-size: 2vw;
+                }    
+
+                & > img{
+                    height: 8vw;
+                }
+            }
+        }
+    }
+}
