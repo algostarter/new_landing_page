@@ -24,5 +24,5 @@ document.querySelector('video').playbackRate = "0.00001";
 
 
 function uncheckBox() {
-    document.getElementById('navbar-checbox').checked = false
+    document.getElementById('navbar_checkbox').checked = false
 }

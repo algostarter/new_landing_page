@@ -93,18 +93,24 @@ html {
       transform: translateX(-100vw);
       transition: all 0.3s ease-out;
       -webkit-backdrop-filter: blur(0.3rem);
+      list-style-type: none;
       backdrop-filter: blur(0.3rem); }
       .navbar__nav-list--link {
-        font-size: 2rem;
-        padding: 0.4em;
+        font-size: 1.4rem;
+        margin: 1rem 2em;
+        padding: 0.6rem;
         text-align: left; }
         .navbar__nav-list--link > a {
           color: black;
-          text-decoration: none; }
+          text-decoration: none;
+          text-transform: capitalize; }
         .navbar__nav-list--link:last-child {
-          background-color: white;
-          box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
-          border-radius: 0.9rem; }
+          background-color: rgba(211, 211, 211, 0.5);
+          border-radius: 0.9rem;
+          width: fit-content;
+          flex-direction: row; }
+          .navbar__nav-list--link:last-child > span > i {
+            font-size: 1.6rem; }
   .hero {
     display: flex;
     flex-direction: column;
@@ -134,7 +140,10 @@ html {
         .hero__text-social > a {
           text-decoration: none;
           color: unset;
-          font-size: 6vw; }
+          font-size: 6vw;
+          transition: all 0.3s ease; }
+          .hero__text-social > a:hover {
+            text-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); }
       .hero__text-poweredby {
         margin-top: 3rem; }
         .hero__text-poweredby > h4 {
@@ -185,33 +194,42 @@ html {
         transform: translate(-50%, -50%);
         background-color: rgba(0, 0, 0, 0.1); }
       .features__center-card {
+        z-index: 1;
         position: absolute;
-        top: 40%;
-        right: 3%;
-        background-color: white;
-        width: fit-content;
-        padding: 1rem 2rem;
-        border-radius: 0.6rem;
-        box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1); }
-        .features__center-card::after {
+        top: 50%;
+        left: 3%;
+        width: fit-content; }
+        .features__center-card--head:hover ~ .features__center-card--body {
+          opacity: 1;
+          transform: scale(1); }
+        .features__center-card--head, .features__center-card--body {
+          box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+          padding: 1rem 2rem;
+          border-radius: 0.6rem; }
+        .features__center-card--head {
+          cursor: default;
+          background-color: white; }
+          .features__center-card--head:hover {
+            color: transparent;
+            box-shadow: none;
+            background: none; }
+        .features__center-card--body {
+          z-index: 100;
           position: absolute;
-          content: "some feature of algostarter";
+          left: -40%;
+          bottom: 10%;
           background-color: white;
-          transform: scale(1.2);
-          padding: 1rem;
-          width: fit-content;
-          height: fit-content;
-          top: 0;
-          left: 0;
+          padding: 0.6rem;
           border-radius: 0.6rem;
-          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-          transition: display 0.3s ease;
-          display: none; }
+          width: 15rem;
+          opacity: 0;
+          transition: all 0.3s ease-in;
+          transform: scale(0.5); }
+          .features__center-card--body > p {
+            font-weight: 300; }
         .features__center-card:nth-child(2) {
-          top: 20%;
-          left: 2%; }
-        .features__center-card:nth-child(2):after:hover {
-          content: "fuck You"; }
+          top: 10%;
+          left: 60%; }
         .features__center-card:nth-child(3) {
           top: 90%;
           left: 50%; }
@@ -278,6 +296,8 @@ html {
           transform: translateY(2.6rem); }
           .roadmap__map-line--dot:nth-child(4)::after {
             content: "Q1 2022"; }
+  .tokenomics__title {
+    text-align: center; }
   .footer {
     display: flex;
     flex-direction: column;
@@ -320,7 +340,8 @@ html {
     padding: 0;
     list-style-type: none; }
     .navbar__nav-list--link {
-      font-weight: 300; }
+      font-weight: 300;
+      margin: 0 0.6rem; }
   .navbar__nav-menu {
     display: none; }
   .navbar__nav-checkbox {
@@ -352,7 +373,8 @@ html {
     flex-direction: row; }
     .features__title {
       width: 50%;
-      text-align: left; }
+      text-align: left;
+      padding: 0 2rem; }
   .roadmap__map-text {
     width: 50%; }
     .roadmap__map-text-card {
@@ -360,7 +382,7 @@ html {
       .roadmap__map-text-card--list > li {
         font-size: 1.6rem; }
       .roadmap__map-text-card:nth-child(2n) {
-        transform: translateX(125%); }
+        transform: translateX(122%); }
   .roadmap__map-line {
     margin: 0; }
     .roadmap__map-line--dot:nth-child(2n)::after {
