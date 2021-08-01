@@ -325,10 +325,6 @@ html {
       color: grey;
       font-weight: 300; } }
 
-@media (min-width: 37.5em) {
-  .hero {
-    background-color: #fff; } }
-
 @media (min-width: 56.35em) {
   .navbar__nav-list {
     transform: none;

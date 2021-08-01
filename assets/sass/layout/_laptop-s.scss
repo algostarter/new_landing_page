@@ -73,9 +73,6 @@
                 &--head:hover~&--body {
                     transform: translateY(0);
                 }
-                &--head {
-                    &:hover {}
-                }
                 &--body {
                     opacity: 1;
                     transform: none;
