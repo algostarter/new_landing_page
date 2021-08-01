@@ -66,6 +66,33 @@
             text-align: left;
             padding: 0 2rem;
         }
+        &__center {
+            &-card {
+                width: 14rem;
+                left: -10%;
+                &--head:hover~&--body {
+                    transform: translateY(0);
+                }
+                &--head {
+                    &:hover {}
+                }
+                &--body {
+                    opacity: 1;
+                    transform: none;
+                    left: 0;
+                    top: 100%;
+                    width: 100%;
+                    height: fit-content;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                    transform: translateY(2rem);
+                }
+                &:nth-child(3) {
+                    top: 74%;
+                    left: 60%;
+                }
+            }
+        }
     }
     .roadmap {
         &__map {

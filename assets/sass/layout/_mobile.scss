@@ -89,7 +89,7 @@
                 backdrop-filter: blur(0.3rem);
                 &--link {
                     font-size: 1.4rem;
-                    margin:1rem 2em;
+                    margin: 1rem 2em;
                     padding: 0.6rem;
                     text-align: left;
                     &>a {
@@ -102,8 +102,7 @@
                         border-radius: 0.9rem;
                         width: fit-content;
                         flex-direction: row;
-
-                        & > span > i {
+                        &>span>i {
                             font-size: 1.6rem;
                         }
                     }
@@ -149,7 +148,7 @@
                     color: unset;
                     font-size: 6vw;
                     transition: all 0.3s ease;
-                    &:hover{
+                    &:hover {
                         text-shadow: 0 0.3rem 0.6rem rgba($color: #000000, $alpha: 0.2);
                     }
                 }
@@ -185,7 +184,8 @@
             width: 30rem;
             height: 30rem;
             border-radius: 100%;
-            background-color: white;
+            background-image: radial-gradient(white, rgba(white, 0.1));
+            box-shadow: 0 0 0.4rem rgba($color: #000000, $alpha: 0.1);
             &::after {
                 content: "";
                 position: absolute;
@@ -215,55 +215,46 @@
             &-card {
                 z-index: 1;
                 position: absolute;
-                top: 50%;
-                left: 3%;
+                top: 60%;
+                left: 5%;
                 width: fit-content;
-                &--head:hover ~ &--body{
+                user-select: none;
+                &--head:hover~&--body {
                     opacity: 1;
-                    transform: scale(1);
+                    transform: translateY(0);
                 }
-                
-                &--head, &--body{
+                &--head,
+                &--body {
                     box-shadow: 0 0.3rem 0.6rem rgba($color: #000000, $alpha: 0.1);
                     padding: 1rem 2rem;
                     border-radius: 0.6rem;
                 }
-
-                &--head{
+                &--head {
                     cursor: default;
                     background-color: white;
-
-                    &:hover{
-                        color: transparent;
-                        box-shadow: none;
-                        background: none;
-                    }
                 }
-                
-                &--body{
+                &--body {
                     z-index: 100;
                     position: absolute;
-                    left: -40%;
-                    bottom: 10%;
+                    left: 0;
+                    bottom: 100%;
                     background-color: white;
                     padding: 0.6rem;
                     border-radius: 0.6rem;
-                    width: 15rem;
+                    width: 100%;
                     opacity: 0;
-                    transition: all 0.3s ease-in;
-                    transform: scale(0.5);
-                    & > p {
+                    transition: all 0.2s ease-in;
+                    transform: translateY(-2rem);
+                    &>p {
                         font-weight: 300;
                     }
                 }
-
                 &:nth-child(2) {
                     top: 10%;
-                    left: 60%;
+                    left: 40%;
                 }
-
                 &:nth-child(3) {
-                    top: 90%;
+                    top: 98%;
                     left: 50%;
                 }
             }
@@ -352,8 +343,8 @@
             }
         }
     }
-    .tokenomics{
-        &__title{
+    .tokenomics {
+        &__title {
             text-align: center;
         }
     }
