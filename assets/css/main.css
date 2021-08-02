@@ -12,13 +12,15 @@ html {
   scroll-behavior: smooth;
   font-family: "Rubik", sans-serif; }
 
-@keyframes toggleGrow {
+@keyframes waterFloat {
   0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.1); }
+    transform: translate(10%, 50%); }
+  30% {
+    transform: translate(5%, -70%); }
+  70% {
+    transform: translate(-5%, 60%); }
   100% {
-    transform: scale(1); } }
+    transform: translate(10%, 50%); } }
 
 @keyframes movebg {
   100% {
@@ -296,6 +298,8 @@ html {
             content: "Q1 2022"; }
   .tokenomics__title {
     text-align: center; }
+    .tokenomics__title > h2 {
+      font-size: 6vw; }
   .footer {
     display: flex;
     flex-direction: column;
@@ -325,6 +329,44 @@ html {
       color: grey;
       font-weight: 300; } }
 
+@media (min-width: 37.5em) {
+  .hero__text-heading-primary {
+    font-size: 6vw; }
+  .hero__text-heading-secondary {
+    font-size: 2.6vw;
+    font-weight: 300; }
+  .hero__text-social {
+    padding: 0.4rem; }
+    .hero__text-social > a {
+      font-size: 4vw; }
+  .hero__text-poweredby {
+    margin-top: 2rem; }
+    .hero__text-poweredby > h4 {
+      font-size: 1.8vw; }
+    .hero__text-poweredby > a > img {
+      width: 40%;
+      height: auto; }
+  .footer {
+    flex-direction: row;
+    height: 20vh;
+    padding: 6rem 0; }
+    .footer > * {
+      width: 32%; }
+    .footer__company {
+      justify-content: left;
+      padding: 2rem; }
+      .footer__company-name > h4 {
+        font-size: 2vw; }
+      .footer__company-logo > img {
+        height: 1.6rem; }
+    .footer__social > a {
+      font-size: 4vw; }
+    .footer__copyright {
+      text-align: right;
+      padding: 2rem; }
+      .footer__copyright > p {
+        font-size: 0.8rem; } }
+
 @media (min-width: 56.35em) {
   .navbar__nav-list {
     transform: none;
@@ -339,7 +381,8 @@ html {
     list-style-type: none; }
     .navbar__nav-list--link {
       font-weight: 300;
-      margin: 0 0.6rem; }
+      margin: 0 0.6rem;
+      font-size: 1.6vw; }
   .navbar__nav-menu {
     display: none; }
   .navbar__nav-checkbox {
@@ -374,8 +417,11 @@ html {
       text-align: left;
       padding: 0 2rem; }
     .features__center-card {
+      animation: waterFloat 80s linear infinite;
       width: 14rem;
       left: -10%; }
+      .features__center-card:hover, .features__center-card:active {
+        animation-play-state: paused; }
       .features__center-card--head:hover ~ .features__center-card--body {
         transform: translateY(0); }
       .features__center-card--body {
@@ -388,9 +434,14 @@ html {
         opacity: 0;
         transition: all 0.3s ease;
         transform: translateY(2rem); }
+      .features__center-card:nth-child(2) {
+        animation-direction: reverse;
+        animation-duration: 75s;
+        top: 3%; }
       .features__center-card:nth-child(3) {
         top: 74%;
-        left: 60%; }
+        left: 60%;
+        animation-duration: 60s; }
   .roadmap__map-text {
     width: 50%; }
     .roadmap__map-text-card {
@@ -417,7 +468,9 @@ html {
       width: 33%;
       text-align: center; }
     .footer__social > a {
-      font-size: 2vw; } }
+      font-size: 2vw; }
+    .footer__copyright > p {
+      font-size: 1.2vw; } }
 
 body {
   background-image: linear-gradient(rgba(245, 245, 220, 0.1), rgba(255, 255, 255, 0.1)), url("../images/bg.png");

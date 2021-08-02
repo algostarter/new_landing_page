@@ -1,5 +1,74 @@
-// @include respond(tablet) {
-//     .hero {
-//         background-color: #fff;
-//     }
-// }
+@include respond(tablet) {
+    .hero{
+        &__text{
+            &-heading{
+                &-primary{
+                    font-size: 6vw;
+                }
+
+                &-secondary{
+                    font-size: 2.6vw;
+                    font-weight: 300;
+                }
+            }
+
+            &-social{
+                padding: 0.4rem;
+                & > a{
+                    font-size: 4vw;
+                }
+            }
+
+            &-poweredby{
+                margin-top: 2rem;
+
+                & > h4{
+                    font-size: 1.8vw;
+                }
+
+                & > a > img{
+                    width: 40%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .footer{
+        flex-direction: row;
+        height: 20vh;
+        padding: 6rem 0;
+
+        & > *{
+            width: 32%;
+        }
+
+        &__company{
+            justify-content: left;
+            padding: 2rem;
+            &-name{
+                & > h4{
+                    font-size: 2vw;
+                }
+            }
+
+            &-logo > img{
+                height: 1.6rem;
+            }
+        }
+
+        &__social{
+            & > a {
+                font-size: 4vw;
+            }
+        }
+
+        &__copyright{
+            text-align: right;
+            padding: 2rem;
+            & > p{
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

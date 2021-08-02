@@ -1,12 +1,16 @@
-@keyframes toggleGrow {
+@keyframes waterFloat {
     0% {
-        transform: scale(1);
+        transform: translate(10%, 50%);
     }
-    50% {
-        transform: scale(1.1);
+    30% {
+        transform: translate(5%, -70%);
     }
-    100% {
-        transform: scale(1);
+    70% {
+        transform: translate(-5%, 60%);
+    }
+
+    100%{
+        transform: translate(10%, 50%);
     }
 }
 

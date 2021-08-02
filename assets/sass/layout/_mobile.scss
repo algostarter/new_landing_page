@@ -346,6 +346,10 @@
     .tokenomics {
         &__title {
             text-align: center;
+
+            & > h2 {
+                font-size: 6vw;
+            }
         }
     }
     .footer {
