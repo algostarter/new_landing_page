@@ -111,6 +111,8 @@ html {
           border-radius: 0.9rem;
           width: fit-content;
           flex-direction: row; }
+          .navbar__nav-list--link:last-child > a {
+            color: rgba(0, 0, 0, 0.2); }
           .navbar__nav-list--link:last-child > span > i {
             font-size: 1.6rem; }
   .hero {
@@ -300,6 +302,16 @@ html {
     text-align: center; }
     .tokenomics__title > h2 {
       font-size: 6vw; }
+  .tokenomics__image {
+    width: 80vw;
+    margin: auto; }
+    .tokenomics__image > img {
+      width: 100%;
+      height: auto; }
+  .tokenomics__marketcap {
+    text-align: center; }
+    .tokenomics__marketcap > h4 {
+      font-size: 3vw; }
   .footer {
     display: flex;
     flex-direction: column;
@@ -461,7 +473,7 @@ html {
     .roadmap__map-line--dot:last-child {
       transform: translateY(5rem); }
   .footer {
-    height: 20vh;
+    height: 30vh;
     flex-direction: row;
     justify-content: space-between; }
     .footer > * {
@@ -470,7 +482,8 @@ html {
     .footer__social > a {
       font-size: 2vw; }
     .footer__copyright > p {
-      font-size: 1.2vw; } }
+      font-size: 1.2vw;
+      text-align: right; } }
 
 body {
   background-image: linear-gradient(rgba(245, 245, 220, 0.1), rgba(255, 255, 255, 0.1)), url("../images/bg.png");

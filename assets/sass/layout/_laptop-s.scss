@@ -141,7 +141,7 @@
         }
     }
     .footer {
-        height: 20vh;
+        height: 30vh;
         flex-direction: row;
         justify-content: space-between;
         &>* {
@@ -157,6 +157,7 @@
         &__copyright{
             & > p {
                 font-size: 1.2vw;
+                text-align: right;
             }
         }
     }
